@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinics & Hospitals - Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --orange: #df8128;
+            --blue: #269cd2;
+            --dark-blue: #136ba0;
+            --light-grey: #f8f9fa;
+            --medium-grey: #f1f1f1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--dark-blue);
+            max-width: 650px;
+            margin: 10px auto 0;
+        }
+
+        /* Feature Boxes */
+        .feature-box {
+            background-color: var(--medium-grey);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-box h5 {
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        .feature-box p {
+            font-size: 0.95rem;
+            color: #555;
+            opacity: 0.85;
+        }
+
+        /* Active State */
+        .feature-box.active {
+            background-color: #fff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            transform: scale(1.02);
+        }
+
+        .feature-box.active h5 {
+            color: var(--dark-blue);
+        }
+
+        /* Hover Effect */
+        .feature-box:hover {
+            background-color: #fff;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+            transform: translateY(-3px);
+        }
+
+        /* Tools Section Layout */
+        .tools-section {
+            background-color: var(--light-grey);
+        }
+
+        .tools-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tools-list {
+            flex: 1.5;
+            min-width: 300px;
+            max-width: 700px;
+        }
+
+        .tools-image {
+            flex: 0.5;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .tools-image img {
+            max-width: 280px;
+            width: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tools-content {
+                flex-direction: column;
+            }
+
+            .tools-image {
+                margin-top: 20px;
+            }
+        }
+
+        .pricing-banner {
+            background: linear-gradient(180deg, #269cd2 0%, #136ba0 100%);
+            border-radius: 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <!-- Intro Section -->
+    <div class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold">
+                Features to manage and grow your <span class="text-primary">Medical Practice</span> online
+            </h2>
+        </div>
+    </div>
+
+    <!-- Business Website Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold"><span class="highlight">Powerful business website</span></h2>
+            <p class="section-subtitle">Create a secure website for your business and manage it easily via the app.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="assets/images/dynamic-website.png" alt="Phone preview" class="img-fluid" width="60%">
+            </div>
+
+            <div class="col-md-6">
+                <div class="p-4">
+                    <h5 class="text-muted fw-bold">Dynamic Website</h5>
+                    <p class="text-muted">Build your online presence with your own business website, within minutes. No
+                        need to hire web developers or freelancers.</p>
+                </div>
+
+                <div class="feature-box active p-4">
+                    <h5 class="fw-bold">Website Security With SSL</h5>
+                    <p>All websites are enabled with HTTPS and SSL certification to protect data from online threats.
+                    </p>
+                </div>
+
+                <div class="p-4">
+                    <h5 class="text-muted fw-bold">Your Own Domain Name (Premium)</h5>
+                    <p class="text-muted">Start with a free domain name like 'yourbusinessname.nowfloats.com' or
+                        purchase a custom domain name from within the app.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catalogue & Appointment Section -->
+    <section style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Ready-made catalogue & appointment management</h2>
+                <p class="section-subtitle">Showcase your services, accept bookings, and collect payments.</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="feature-box active">
+                        <h5 class="fw-bold">Service Catalogue</h5>
+                        <p class="text-muted">Add detailed service information to help patients decide faster.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5 class="fw-bold">Doctor’s e-Profiles (Premium)</h5>
+                        <p class="text-muted">List medical degrees, experience, and awards to build trust.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5 class="fw-bold">Appointment Booking (Premium)</h5>
+                        <p class="text-muted">Patients can book online; track all appointments in one place.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5 class="fw-bold">Boost Payment Gateway</h5>
+                        <p class="text-muted">Accept payments via cards, UPI, net banking, and wallets.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <img src="assets/images/social-media-sync.png" alt="Phone Preview" class="img-fluid"
+                        style="max-height:500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telemedicine Section -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Use telemedicine to connect with patients</h2>
+                <p class="section-subtitle">Consult online, take notes, and issue
+                    e-prescriptions.</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="assets/images/online-video-consultation.png" alt="Doctor Video Call"
+                        class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="feature-box active">
+                        <h5 class="fw-bold">Online Video Consultation (Premium)</h5>
+                        <p>Secure 1-on-1 consultations with optional recording.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5 class="fw-bold">HIPAA Compliance (Premium)</h5>
+                        <p>Maintain confidentiality and security of all interactions.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5 class="fw-bold">Prescription Management (Premium)</h5>
+                        <p>Issue secure, digitally signed prescriptions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tools for patient engagement</h2>
+                <p class="section-subtitle">Reach patients via Facebook, Twitter, WhatsApp and more.</p>
+            </div>
+
+            <div class="tools-content">
+                <div class="tools-list">
+                    <div class="feature-box active">
+                        <h5>Social Media Sync</h5>
+                        <p>Auto-share updates to social media with one click.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5>Reviews & Testimonials (Premium)</h5>
+                        <p>Publish patient testimonials to build trust.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5>Customer Call Tracker (Premium)</h5>
+                        <p>Track and analyze patient calls via VMN.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h5>IVR Facility (Premium)</h5>
+                        <p>Route calls 24×7 to the right department.</p>
+                    </div>
+                </div>
+
+                <div class="tools-image">
+                    <img src="assets/images/service-catalogue.png" alt="Digital Channels">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-banner py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left Image -->
+                <div class="col-md-5 text-center">
+                    <div class="p-2" style="display:inline-block; border-radius:30px; overflow:hidden; width:400px;">
+                        <img src="assets/images/last img.png" alt="Doctors" class="img-fluid rounded-4"
+                            style="width:100%; height:280px">
+                    </div>
+                </div>
+
+
+
+                <!-- Right Text -->
+                <div class="col-md-7 text-white">
+                    <div class="badge bg-light text-dark mb-3 fw-bold px-3 py-2">LOWEST PRICING</div>
+                    <h3 class="fw-bold">Get started in your category with plans at only ₹59,999/year.</h3>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <!-- <a href="#" class="btn btn-light fw-bold px-4 py-2">Start 15 day free trial</a> -->
+                        <a href="#formSection" data-bs-toggle="modal" data-bs-target="#websiteModal"
+                            class="btn btn-outline-light fw-bold px-4 py-2" id="contactBtn">Contact
+                            us</a>
+
+                        <script>
+                            document.getElementById("contactBtn").addEventListener("click", function (e) {
+                                e.preventDefault(); // Prevent instant jump
+                                document.querySelector("#formSection").scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <p class="mt-3 small">
+                        Grobiz 360 offers the best yearly <a href="pricing.html" class="text-light">pricing</a> in the
+                        market – Need assistance? Speak with our
+                        expert
+                        today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="websiteModal" tabindex="-1" aria-labelledby="websiteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 rounded-3">
+
+                <!-- Header -->
+                <div class="modal-header" style="background-color: #136ba0; color: white;">
+                    <h5 class="modal-title" id="websiteModalLabel">Make a website now!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body">
+                    <form id="websiteForm">
+                        <div class="mb-2">
+                            <label class="form-label mb-0">Mobile number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control text-muted" placeholder="Enter your mobile number"
+                                required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label mb-0">Business location <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control text-muted" placeholder="Please select your location"
+                                required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label mb-0">Business category <span class="text-danger">*</span></label>
+                            <select class="form-select text-muted" required>
+                                <option selected disabled>Select</option>
+                                <option>Services Business</option>
+                                <option>Manufacturing & Equipment</option>
+                                <option>Health Specialists</option>
+                                <option>Clinics & Hospitals</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label mb-0">Name of your business <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control text-muted" placeholder="Add your business name"
+                                required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label mb-0">Email address</label>
+                            <input type="email" class="form-control text-muted" placeholder="Add your email ID">
+                        </div>
+
+                        <!-- Footer Buttons -->
+                        <div class="d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn"
+                                style="background-color:#df8128; color:white;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to close modal after submit -->
+    <script>
+        document.getElementById("websiteForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent real submission
+            var modal = bootstrap.Modal.getInstance(document.getElementById('websiteModal'));
+            modal.hide();
+            // You can also add form submission logic here (AJAX, etc.)
+        });
+    </script>
+
+
+    <!-- Scripts -->
+    <script>
+        document.querySelectorAll('.feature-box').forEach(box => {
+            box.addEventListener('click', () => {
+                box.closest('.tools-list, .col-md-6')
+                    ?.querySelectorAll('.feature-box')
+                    .forEach(b => b.classList.remove('active'));
+                box.classList.add('active');
+            });
+        });
+    </script>
+
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                let currentPage = window.location.pathname.split("/").pop();
+                let dropdownToggle = document.querySelector(".nav-item.dropdown .nav-link.dropdown-toggle");
+                let pricingBtn = document.getElementById("pricingBtn");
+                // const pricingBtn = document.getElementById("pricingBtn");
+
+
+                const pricingMap = {
+                    "services_business.html": "pricing_services_business.html",
+                    "manufactural.html": "pricing_manufactural.html",
+                    "doctor&health.html": "pricing_doctor_health.html",
+                    "clinic&hospital.html": "pricing_clinic_hospital.html"
+                };
+
+                const reverseMap = {
+                    "pricing_services_business.html": "services_business.html",
+                    "pricing_manufactural.html": "manufactural.html",
+                    "pricing_doctor_health.html": "doctor&health.html",
+                    "pricing_clinic_hospital.html": "clinic&hospital.html"
+                };
+
+                // If features page → leave dropdown blank and exit
+                if (currentPage === "features.html") {
+                    if (dropdownToggle) dropdownToggle.textContent = "Features of All";
+                    return;
+                }
+
+                if (pricingBtn) {
+                    pricingBtn.style.display = "none"; // hides the button
+                }
+
+                function activateCategory(pageName) {
+                    let categoryLink = [...document.querySelectorAll(".dropdown-menu a")].find(
+                        link => link.getAttribute("href").includes(pageName)
+                    );
+                    if (categoryLink && dropdownToggle) {
+                        categoryLink.classList.add("active", "fw-bold");
+                        let icon = categoryLink.querySelector("i");
+                        if (icon) icon.style.color = "#df8128";
+                        dropdownToggle.innerHTML = `for ${categoryLink.textContent.trim()}`;
+                    }
+                }
+
+                if (reverseMap[currentPage]) {
+                    activateCategory(reverseMap[currentPage]);
+                    pricingBtn.style.display = "none";
+                    return;
+                }
+
+                document.querySelectorAll(".dropdown-menu a").forEach(link => {
+                    let linkPage = link.getAttribute("href").split("/").pop();
+                    if (linkPage === currentPage) {
+                        activateCategory(linkPage);
+                        if (pricingMap[currentPage]) {
+                            pricingBtn.href = pricingMap[currentPage];
+                        }
+                    }
+                });
+            });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

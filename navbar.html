@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar with Spacing & Pricing Button</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Bootstrap Icons in <head> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --orange: #df8128;
+            --blue: #269cd2;
+            --dark-blue: #136ba0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            padding-top: 70px;
+            /* adjust to your navbar height */
+        }
+
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--dark-blue) !important;
+        }
+
+        .nav-link {
+            color: var(--dark-blue) !important;
+            font-weight: 500;
+            margin: 0 15px;
+            /* space between links */
+        }
+
+        .nav-link:hover {
+            color: var(--orange) !important;
+        }
+
+        .btn-pricing {
+            background-color: var(--orange);
+            color: white;
+            border-radius: 6px;
+            padding: 0.4rem 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-pricing:hover {
+            background-color: var(--dark-blue);
+            color: white;
+        }
+
+        #pricingBtn {
+            position: fixed;
+            top: 60px;
+            right: 10px;
+            background: linear-gradient(180deg, #269cd2 0%, #136ba0 100%);
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 8px 18px;
+            z-index: 1050;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s;
+            display: block;
+
+            /* Animation */
+            animation: shake 0.5s ease-in-out infinite;
+        }
+
+        #pricingBtn:hover {
+            background-color: #c76e21;
+        }
+
+        body[data-page="pricing"] #pricingBtn {
+            display: none !important;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: white;
+            }
+
+            .dropdown-menu {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="height:70px;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Grobiz
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Industry</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            for Clinics & Hospitals
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="services_business.html">
+                                    <i class="bi bi-people-fill me-2" style="color:#269cd2;"></i> Services Business
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="manufactural.html">
+                                    <i class="bi bi-building-fill me-2" style="color:#269cd2;"></i> Manufacturing &
+                                    Equipment
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="doctor&health.html">
+                                    <i class="bi bi-heart-pulse-fill me-2" style="color:#269cd2;"></i> Doctors & Health
+                                    Specialists
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="clinic&hospital.html">
+                                    <i class="bi bi-hospital-fill me-2" style="color:#269cd2;"></i> Clinics & Hospitals
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" id="pricingBtn" class="btn btn-pricing">View Pricing</a>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop();
+            let dropdownToggle = document.querySelector(".nav-item.dropdown .nav-link.dropdown-toggle");
+
+            document.querySelectorAll(".dropdown-menu a").forEach(link => {
+                let linkPage = link.getAttribute("href").split("/").pop();
+                console.log(linkPage);
+
+                if (linkPage === currentPage) {
+                    // Highlight active link
+                    link.classList.add("active", "fw-bold");
+                    link.style.backgroundColor = "#fff5ec";
+
+                    let icon = link.querySelector("i");
+                    if (icon) icon.style.color = "#df8128";
+
+                    // Change main dropdown label to selected link text
+                    if (dropdownToggle) {
+                        dropdownToggle.innerHTML = `for Clinics & Hospitals - ${link.textContent.trim()}`;
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.toLowerCase();
+            let pricingBtn = document.getElementById("pricingBtn");
+
+            // Hide if the URL ends with pricing.html or /pricing
+            if (currentPage.endsWith("pricing.html") || currentPage.endsWith("/pricing")) {
+                pricingBtn.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
